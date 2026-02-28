@@ -1,13 +1,12 @@
 package com.challenge.api.service;
 
-import com.challenge.api.model.Employee;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
+import com.challenge.api.model.Employee;
 import java.util.List;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class EmployeeServiceTest {
 
@@ -42,9 +41,8 @@ class EmployeeServiceTest {
     @Test
     void testCreateEmployee_addsNewEmployee() {
         int before = employeeService.getAllEmployees().size();
-        Employee newEmp = employeeService.createEmployee(
-                "Charlie", "Brown", 60000, 28, "QA Engineer", "charlie@example.com"
-        );
+        Employee newEmp =
+                employeeService.createEmployee("Charlie", "Brown", 60000, 28, "QA Engineer", "charlie@example.com");
         int after = employeeService.getAllEmployees().size();
 
         assertEquals(before + 1, after);

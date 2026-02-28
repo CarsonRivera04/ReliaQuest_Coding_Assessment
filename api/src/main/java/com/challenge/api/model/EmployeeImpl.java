@@ -30,8 +30,14 @@ public class EmployeeImpl implements Employee {
      * @param email Employee's email
      * @param contractHireDate Date of hire
      */
-    public EmployeeImpl(String firstName, String lastName, Integer salary, Integer age,
-                        String jobTitle, String email, Instant contractHireDate) {
+    public EmployeeImpl(
+            String firstName,
+            String lastName,
+            Integer salary,
+            Integer age,
+            String jobTitle,
+            String email,
+            Instant contractHireDate) {
         this.uuid = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,13 +51,19 @@ public class EmployeeImpl implements Employee {
     }
 
     @Override
-    public UUID getUuid() { return uuid; }
+    public UUID getUuid() {
+        return uuid;
+    }
 
     @Override
-    public void setUuid(UUID uuid) { this.uuid = uuid; }
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
 
     @Override
-    public String getFirstName() { return firstName; }
+    public String getFirstName() {
+        return firstName;
+    }
 
     @Override
     public void setFirstName(String name) {
@@ -60,7 +72,9 @@ public class EmployeeImpl implements Employee {
     }
 
     @Override
-    public String getLastName() { return lastName; }
+    public String getLastName() {
+        return lastName;
+    }
 
     @Override
     public void setLastName(String name) {
@@ -69,46 +83,74 @@ public class EmployeeImpl implements Employee {
     }
 
     @Override
-    public String getFullName() { return fullName; }
+    public String getFullName() {
+        return fullName;
+    }
 
     @Override
-    public void setFullName(String name) { this.fullName = name; }
+    public void setFullName(String name) {
+        this.fullName = name;
+    }
 
     @Override
-    public Integer getSalary() { return salary; }
+    public Integer getSalary() {
+        return salary;
+    }
 
     @Override
-    public void setSalary(Integer salary) { this.salary = salary; }
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
 
     @Override
-    public Integer getAge() { return age; }
+    public Integer getAge() {
+        return age;
+    }
 
     @Override
-    public void setAge(Integer age) { this.age = age; }
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
     @Override
-    public String getJobTitle() { return jobTitle; }
+    public String getJobTitle() {
+        return jobTitle;
+    }
 
     @Override
-    public void setJobTitle(String jobTitle) { this.jobTitle = jobTitle; }
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
 
     @Override
-    public String getEmail() { return email; }
+    public String getEmail() {
+        return email;
+    }
 
     @Override
-    public void setEmail(String email) { this.email = email; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
-    public Instant getContractHireDate() { return contractHireDate; }
+    public Instant getContractHireDate() {
+        return contractHireDate;
+    }
 
     @Override
-    public void setContractHireDate(Instant date) { this.contractHireDate = date; }
+    public void setContractHireDate(Instant date) {
+        this.contractHireDate = date;
+    }
 
     @Override
-    public Instant getContractTerminationDate() { return contractTerminationDate; }
+    public Instant getContractTerminationDate() {
+        return contractTerminationDate;
+    }
 
     @Override
-    public void setContractTerminationDate(Instant date) { this.contractTerminationDate = date; }
+    public void setContractTerminationDate(Instant date) {
+        this.contractTerminationDate = date;
+    }
 
     /**
      * Helper method to update the full name when first or last name changes.

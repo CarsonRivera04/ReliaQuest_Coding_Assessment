@@ -2,10 +2,9 @@ package com.challenge.api.service;
 
 import com.challenge.api.model.Employee;
 import com.challenge.api.model.EmployeeImpl;
-import org.springframework.stereotype.Service;
-
 import java.time.Instant;
 import java.util.*;
+import org.springframework.stereotype.Service;
 
 /**
  * Service layer responsible for managing Employee objects.
@@ -21,10 +20,10 @@ public class EmployeeService {
      * Constructor initializes mock employees for testing.
      */
     public EmployeeService() {
-        Employee e1 = new EmployeeImpl("Alice", "Smith", 70000, 30, "Software Engineer",
-                "alice.smith@example.com", Instant.now());
-        Employee e2 = new EmployeeImpl("Bob", "Johnson", 85000, 35, "Product Manager",
-                "bob.johnson@example.com", Instant.now());
+        Employee e1 = new EmployeeImpl(
+                "Alice", "Smith", 70000, 30, "Software Engineer", "alice.smith@example.com", Instant.now());
+        Employee e2 = new EmployeeImpl(
+                "Bob", "Johnson", 85000, 35, "Product Manager", "bob.johnson@example.com", Instant.now());
 
         employeeStore.put(e1.getUuid(), e1);
         employeeStore.put(e2.getUuid(), e2);
@@ -65,8 +64,8 @@ public class EmployeeService {
      * @param email Employee email
      * @return Newly created Employee
      */
-    public Employee createEmployee(String firstName, String lastName, Integer salary, Integer age,
-                                   String jobTitle, String email) {
+    public Employee createEmployee(
+            String firstName, String lastName, Integer salary, Integer age, String jobTitle, String email) {
         Employee newEmployee = new EmployeeImpl(firstName, lastName, salary, age, jobTitle, email, Instant.now());
         employeeStore.put(newEmployee.getUuid(), newEmployee);
         return newEmployee;

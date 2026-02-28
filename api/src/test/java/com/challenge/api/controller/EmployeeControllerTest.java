@@ -1,5 +1,8 @@
 package com.challenge.api.controller;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 import com.challenge.api.service.EmployeeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,9 +10,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -38,7 +38,8 @@ class EmployeeControllerTest {
 
     @Test
     void testCreateEmployee_returnsCreated() throws Exception {
-        String newEmployeeJson = """
+        String newEmployeeJson =
+                """
             {
                 "firstName": "Charlie",
                 "lastName": "Brown",
