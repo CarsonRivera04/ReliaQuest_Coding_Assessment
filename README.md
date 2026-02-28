@@ -1,3 +1,6 @@
+# Carson Rivera Submission
+In this submission, I successfully implemented a secure REST API with endpoints to list all employees, fetch by UUID, and create new employees. I also designed a service layer with an in-memory store as well as unit and integration tests to ensure correctness and reliability. Thank you very much for the opportunity!  
+
 # ReliaQuest's Entry-Level Java Challenge
 
 Please keep the following in mind while working on this challenge:
