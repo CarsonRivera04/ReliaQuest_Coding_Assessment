@@ -6,6 +6,9 @@ In this submission, I successfully implemented a secure REST API with endpoints 
 ```
 git clone https://github.com/CarsonRivera04/ReliaQuest_Coding_Assessment.git
 ```
+```
+cd ReliaQuest_Coding_Assessment
+```
 
 2. Build project 
 ```
