@@ -1,6 +1,54 @@
 # Carson Rivera Submission
 In this submission, I successfully implemented a secure REST API with endpoints to list all employees, fetch by UUID, and create new employees. I also designed a service layer with an in-memory store as well as unit and integration tests to ensure correctness and reliability. Thank you very much for the opportunity!  
 
+# Running Locally 
+1. Clone repository 
+```
+git clone https://github.com/CarsonRivera04/ReliaQuest_Coding_Assessment.git
+```
+
+2. Build project 
+```
+./gradlew build
+```
+
+3. Run application 
+```
+./gradlew :api:bootRun
+```
+
+4. Test out endpoints 
+    * Get all employees
+        ```
+        curl -X GET http://localhost:8080/api/v1/employee
+        ```
+    * Get employee by UUID  
+        ```
+        curl -X GET http://localhost:8080/api/v1/employee/<uuid>
+        ```
+    * Create a new employee 
+        ```
+        curl -X POST http://localhost:8080/api/v1/employee \
+        -H "Content-Type: application/json" \
+        -d '{
+        "firstName": "Charlie",
+        "lastName": "Brown",
+        "salary": 60000,
+        "age": 26,
+        "jobTitle": "QA Engineer",
+        "email": "charlie.brown@example.com"
+        }'
+        ```
+
+5. Run tests 
+```
+./gradlew test
+```
+```
+open api/build/reports/tests/test/index.html
+```
+
+
 # ReliaQuest's Entry-Level Java Challenge
 
 Please keep the following in mind while working on this challenge:
